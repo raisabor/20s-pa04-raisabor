@@ -1,0 +1,3 @@
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/cmake-build-debug/CMakeFiles/Project4.dir
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/cmake-build-debug/CMakeFiles/edit_cache.dir
