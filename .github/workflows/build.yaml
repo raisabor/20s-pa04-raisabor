@@ -1,14 +1,14 @@
-name: 20S-3353-PA03
+name: 20S-3353-PA04
 
 on: [push]
 
 env:
-  EXE_NAME: Project3
+  EXE_NAME: Project4
   ### ***** Students!  Put the name of the input files and output files here.
   ###   List them in the order that they need to appear in Argv param of main.
   ###   Output Files will follow input files
   ###   Note: These should be the actual names of the files.  No double quotes
-  INPUT_FILES: graph-in.txt
+  INPUT_FILES:
   OUTPUT_FILES:
 
 jobs:
