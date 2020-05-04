@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.cpp
+AdjacencyList.h
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.h
+
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.h
+iostream
+-
+vector
+-
+list
+-
+iterator
+-
+Town.h
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Town.h
+
 /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Algorithm.h
 iostream
 -
@@ -25,6 +41,28 @@ Town.h
 /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Town.h
 cstdlib
 -
+
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Naive.cpp
+Naive.h
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Naive.h
+
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Naive.h
+iostream
+-
+AdjacencyList.h
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.h
+Town.h
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Town.h
+vector
+-
+algorithm
+-
+cfloat
+-
+list
+-
+TourManager.h
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/TourManager.h
 
 /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Population.cpp
 Population.h
@@ -75,6 +113,10 @@ Tour.h
 /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Tour.h
 Genetic.h
 /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Genetic.h
+AdjacencyList.h
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.h
+Naive.h
+/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Naive.h
 
 /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Tour.cpp
 Tour.h

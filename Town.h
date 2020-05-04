@@ -15,6 +15,7 @@ class Town {
     float x;
     float y;
     float z;
+    float weight;
     float ident;
 
     public:
@@ -29,16 +30,19 @@ class Town {
     friend ostream& operator<<(ostream&, const Town&);
     
     float distanceTo(Town);
+    static float distance(Town, Town);
 
     void setX(float);
     void setY(float);
     void setZ(float);
+    void setWeight(float);
     void setIdent(float);
 
 
     float getX();
     float getY();
     float getZ();
+    float getWeight();
     float getIdent();
     
     string print();

@@ -16,16 +16,20 @@ int main(int argc, const char * argv[]) {
     Algorithm* potter = new Search();
 
     string array[] = { "positions9.txt", "positions25.txt", "positions100.txt"};
-    
+    int k = 1;
     for( int index = 0; index < 3; index++)
     {
 
             potter->Load(array[index]);
-            potter->Select(0);
+            potter->Select(k);
             potter->Execute();
             potter->Stats();
             potter->Display();
             potter->Save("SavedSolution.txt");
+
+        if(index >= 0)
+            k = 0;
+
 
 
     }

@@ -123,6 +123,33 @@ Project4/fast:
 	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/build
 .PHONY : Project4/fast
 
+AdjacencyList.o: AdjacencyList.cpp.o
+
+.PHONY : AdjacencyList.o
+
+# target to build an object file
+AdjacencyList.cpp.o:
+	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/AdjacencyList.cpp.o
+.PHONY : AdjacencyList.cpp.o
+
+AdjacencyList.i: AdjacencyList.cpp.i
+
+.PHONY : AdjacencyList.i
+
+# target to preprocess a source file
+AdjacencyList.cpp.i:
+	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/AdjacencyList.cpp.i
+.PHONY : AdjacencyList.cpp.i
+
+AdjacencyList.s: AdjacencyList.cpp.s
+
+.PHONY : AdjacencyList.s
+
+# target to generate assembly for a file
+AdjacencyList.cpp.s:
+	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/AdjacencyList.cpp.s
+.PHONY : AdjacencyList.cpp.s
+
 Genetic.o: Genetic.cpp.o
 
 .PHONY : Genetic.o
@@ -149,6 +176,33 @@ Genetic.s: Genetic.cpp.s
 Genetic.cpp.s:
 	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/Genetic.cpp.s
 .PHONY : Genetic.cpp.s
+
+Naive.o: Naive.cpp.o
+
+.PHONY : Naive.o
+
+# target to build an object file
+Naive.cpp.o:
+	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/Naive.cpp.o
+.PHONY : Naive.cpp.o
+
+Naive.i: Naive.cpp.i
+
+.PHONY : Naive.i
+
+# target to preprocess a source file
+Naive.cpp.i:
+	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/Naive.cpp.i
+.PHONY : Naive.cpp.i
+
+Naive.s: Naive.cpp.s
+
+.PHONY : Naive.s
+
+# target to generate assembly for a file
+Naive.cpp.s:
+	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/Naive.cpp.s
+.PHONY : Naive.cpp.s
 
 Population.o: Population.cpp.o
 
@@ -321,9 +375,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Project4"
 	@echo "... edit_cache"
+	@echo "... AdjacencyList.o"
+	@echo "... AdjacencyList.i"
+	@echo "... AdjacencyList.s"
 	@echo "... Genetic.o"
 	@echo "... Genetic.i"
 	@echo "... Genetic.s"
+	@echo "... Naive.o"
+	@echo "... Naive.i"
+	@echo "... Naive.s"
 	@echo "... Population.o"
 	@echo "... Population.i"
 	@echo "... Population.s"

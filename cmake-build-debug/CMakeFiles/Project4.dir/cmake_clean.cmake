@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project4.dir/Town.cpp.o"
   "CMakeFiles/Project4.dir/Population.cpp.o"
   "CMakeFiles/Project4.dir/Genetic.cpp.o"
+  "CMakeFiles/Project4.dir/Naive.cpp.o"
+  "CMakeFiles/Project4.dir/AdjacencyList.cpp.o"
   "Project4.pdb"
   "Project4"
 )

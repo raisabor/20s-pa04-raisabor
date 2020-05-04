@@ -48,6 +48,11 @@ float Town::distanceTo(Town dest)
     return distance;
 }
 
+float Town::distance(Town src, Town dest)
+{
+    return sqrt(pow(dest.getX() - src.getX(), 2) + pow(dest.getY() - src.getY(), 2) + pow(dest.getZ() - src.getZ(), 2) * 1.0);
+}
+
 void Town::setX(float x)
 {
     this->x = x;
@@ -62,6 +67,11 @@ void Town::setZ(float z)
 {
     this->z = z;
 }
+void Town::setWeight(float w)
+{
+    weight = w;
+}
+
 
 void Town::setIdent(float i)
 {
@@ -87,6 +97,11 @@ float Town::getZ()
 float Town::getIdent()
 {
     return ident;
+}
+
+float Town::getWeight()
+{
+    return weight;
 }
 
 

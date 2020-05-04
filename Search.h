@@ -17,6 +17,8 @@
 #include "Population.h"
 #include "Tour.h"
 #include "Genetic.h"
+#include "AdjacencyList.h"
+#include "Naive.h"
 
 
 
@@ -25,16 +27,16 @@ using namespace std;
 class Search : public Algorithm
 {
 private:
-    
-    
-	bool* selection;
-    vector<Town>* vec1;
-	double* timeSpan;
-    list<int>* holder;
-    float* holder2;
 
-  
-    
+    Naive salesMan;
+    bool selection[4];
+    vector<Town> vec1;
+	double timeSpan;
+    list<int> holder;
+    float holder2;
+    AdjacencyList ajay;
+    pair<string, double> naively;
+    pair<string, double> evolutionary;
 
 
 

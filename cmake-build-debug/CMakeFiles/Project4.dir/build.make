@@ -225,6 +225,54 @@ CMakeFiles/Project4.dir/Genetic.cpp.o.provides: CMakeFiles/Project4.dir/Genetic.
 CMakeFiles/Project4.dir/Genetic.cpp.o.provides.build: CMakeFiles/Project4.dir/Genetic.cpp.o
 
 
+CMakeFiles/Project4.dir/Naive.cpp.o: CMakeFiles/Project4.dir/flags.make
+CMakeFiles/Project4.dir/Naive.cpp.o: ../Naive.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project4.dir/Naive.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project4.dir/Naive.cpp.o -c /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Naive.cpp
+
+CMakeFiles/Project4.dir/Naive.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project4.dir/Naive.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Naive.cpp > CMakeFiles/Project4.dir/Naive.cpp.i
+
+CMakeFiles/Project4.dir/Naive.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project4.dir/Naive.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Naive.cpp -o CMakeFiles/Project4.dir/Naive.cpp.s
+
+CMakeFiles/Project4.dir/Naive.cpp.o.requires:
+
+.PHONY : CMakeFiles/Project4.dir/Naive.cpp.o.requires
+
+CMakeFiles/Project4.dir/Naive.cpp.o.provides: CMakeFiles/Project4.dir/Naive.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/Naive.cpp.o.provides.build
+.PHONY : CMakeFiles/Project4.dir/Naive.cpp.o.provides
+
+CMakeFiles/Project4.dir/Naive.cpp.o.provides.build: CMakeFiles/Project4.dir/Naive.cpp.o
+
+
+CMakeFiles/Project4.dir/AdjacencyList.cpp.o: CMakeFiles/Project4.dir/flags.make
+CMakeFiles/Project4.dir/AdjacencyList.cpp.o: ../AdjacencyList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Project4.dir/AdjacencyList.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project4.dir/AdjacencyList.cpp.o -c /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.cpp
+
+CMakeFiles/Project4.dir/AdjacencyList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project4.dir/AdjacencyList.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.cpp > CMakeFiles/Project4.dir/AdjacencyList.cpp.i
+
+CMakeFiles/Project4.dir/AdjacencyList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project4.dir/AdjacencyList.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.cpp -o CMakeFiles/Project4.dir/AdjacencyList.cpp.s
+
+CMakeFiles/Project4.dir/AdjacencyList.cpp.o.requires:
+
+.PHONY : CMakeFiles/Project4.dir/AdjacencyList.cpp.o.requires
+
+CMakeFiles/Project4.dir/AdjacencyList.cpp.o.provides: CMakeFiles/Project4.dir/AdjacencyList.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Project4.dir/build.make CMakeFiles/Project4.dir/AdjacencyList.cpp.o.provides.build
+.PHONY : CMakeFiles/Project4.dir/AdjacencyList.cpp.o.provides
+
+CMakeFiles/Project4.dir/AdjacencyList.cpp.o.provides.build: CMakeFiles/Project4.dir/AdjacencyList.cpp.o
+
+
 # Object files for target Project4
 Project4_OBJECTS = \
 "CMakeFiles/Project4.dir/main.cpp.o" \
@@ -233,7 +281,9 @@ Project4_OBJECTS = \
 "CMakeFiles/Project4.dir/TourManager.cpp.o" \
 "CMakeFiles/Project4.dir/Town.cpp.o" \
 "CMakeFiles/Project4.dir/Population.cpp.o" \
-"CMakeFiles/Project4.dir/Genetic.cpp.o"
+"CMakeFiles/Project4.dir/Genetic.cpp.o" \
+"CMakeFiles/Project4.dir/Naive.cpp.o" \
+"CMakeFiles/Project4.dir/AdjacencyList.cpp.o"
 
 # External object files for target Project4
 Project4_EXTERNAL_OBJECTS =
@@ -245,9 +295,11 @@ Project4: CMakeFiles/Project4.dir/TourManager.cpp.o
 Project4: CMakeFiles/Project4.dir/Town.cpp.o
 Project4: CMakeFiles/Project4.dir/Population.cpp.o
 Project4: CMakeFiles/Project4.dir/Genetic.cpp.o
+Project4: CMakeFiles/Project4.dir/Naive.cpp.o
+Project4: CMakeFiles/Project4.dir/AdjacencyList.cpp.o
 Project4: CMakeFiles/Project4.dir/build.make
 Project4: CMakeFiles/Project4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Project4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Project4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -262,6 +314,8 @@ CMakeFiles/Project4.dir/requires: CMakeFiles/Project4.dir/TourManager.cpp.o.requ
 CMakeFiles/Project4.dir/requires: CMakeFiles/Project4.dir/Town.cpp.o.requires
 CMakeFiles/Project4.dir/requires: CMakeFiles/Project4.dir/Population.cpp.o.requires
 CMakeFiles/Project4.dir/requires: CMakeFiles/Project4.dir/Genetic.cpp.o.requires
+CMakeFiles/Project4.dir/requires: CMakeFiles/Project4.dir/Naive.cpp.o.requires
+CMakeFiles/Project4.dir/requires: CMakeFiles/Project4.dir/AdjacencyList.cpp.o.requires
 
 .PHONY : CMakeFiles/Project4.dir/requires
 

@@ -9,7 +9,7 @@ using namespace std;
 
 enum metaheuristic {
     Gene = 0,
-    Taboo,
+    Brute,
     
 };
 

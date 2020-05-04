@@ -3,11 +3,9 @@
 Search::Search()
 {
 	
-	selection = new bool[4];
-    timeSpan = new double;
-    vec1 = new vector<Town>;
-    holder = new list<int>;
-    holder2 = new float;
+
+    timeSpan = 0.0;
+    holder2 = 0.0;
 	
 	
 	
@@ -16,11 +14,7 @@ Search::Search()
 
 Search::~Search()
 {
-	delete[] selection;
-    delete timeSpan;
-    delete vec1;
-    delete holder;
-    delete holder2;
+
 
 }
 
@@ -93,7 +87,7 @@ void Search::Load(string loade)
                   }
                   
               }
-              vec1->push_back(Town(tmp));
+              vec1.push_back(Town(tmp));
               
               TourManager::addTown(Town(tmp));
               
@@ -101,9 +95,18 @@ void Search::Load(string loade)
              
             }
 
-		
+          for(int f = 0; f < 9; f++)
+          {
+              for(int g = 0; g < 9; g++)
+              {
+                  ajay.insertFor(*(new Town(vec1[f])), *(new Town(vec1[g])));
+              }
+          }
 
-    }
+
+
+
+      }
     
 }
           
@@ -120,14 +123,17 @@ void Search::Display()
     
     cout << endl;
     }
-    
+
     if(selection[1])
     {
-    
-        cout << "Algorithm name: " << endl;
-        cout << "Exectuion time(seconds): " << endl;
+
+        cout << "Algorithm name: " << get<0>(naively) << endl;
+        cout << "Exectuion time(seconds): " << get<1>(naively) << endl;
         cout << "Optimal Path: ";
-       
+        for(const int &i: holder)
+        {
+            cout << i << "-> ";
+        }
         cout << endl;
     }
     
@@ -138,7 +144,14 @@ void Search::Display()
 void Search::Stats()
 {
 
-    
+    if(selection[1])
+    {
+
+        naively = make_pair("Naive Technique",timeSpan);
+
+    }else{
+        evolutionary = make_pair("Genetic Technique", timeSpan);
+    }
   
 }
 
@@ -149,7 +162,7 @@ void Search::Select(int level)
     case Gene:
 		 selection[0] = true;
          break;
-     case Taboo:
+     case Brute:
 		 selection[1] = true;
          break;
      default:
@@ -221,8 +234,17 @@ void Search::Execute()
         //delete pop;
         
 		chrono::high_resolution_clock::time_point t2 = chrono::high_resolution_clock::now();
-		*timeSpan = chrono::duration_cast<chrono::milliseconds>(t2 - t1).count();
+		timeSpan = chrono::duration_cast<chrono::milliseconds>(t2 - t1).count();
 	}
+
+    if (selection[1])
+    {
+        chrono::high_resolution_clock::time_point t1 = chrono::high_resolution_clock::now();
+        holder = salesMan.shortestCycle(ajay, 0);
+        chrono::high_resolution_clock::time_point t2 = chrono::high_resolution_clock::now();
+        timeSpan = chrono::duration_cast<chrono::microseconds>(t2 - t1).count();
+    }
+
 
 
 }

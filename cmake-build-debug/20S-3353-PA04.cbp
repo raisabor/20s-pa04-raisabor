@@ -84,10 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.cpp">
+			<Option target="Project4"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/AdjacencyList.h">
+			<Option target="Project4"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Genetic.cpp">
 			<Option target="Project4"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Genetic.h">
+			<Option target="Project4"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Naive.cpp">
+			<Option target="Project4"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Naive.h">
 			<Option target="Project4"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/Population.cpp">
