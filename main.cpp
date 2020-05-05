@@ -15,24 +15,27 @@ int main(int argc, const char * argv[]) {
     srand ( time(NULL) );
     Algorithm* potter = new Search();
 
-    string array[] = { "positions9.txt", "positions25.txt", "positions100.txt"};
-    int k = 1;
+    string array[] = { "positions7.txt", "positions25.txt", "positions100.txt"};
     for( int index = 0; index < 3; index++)
     {
 
-            potter->Load(array[index]);
-            potter->Select(k);
-            potter->Execute();
-            potter->Stats();
-            potter->Display();
-            potter->Save("SavedSolution.txt");
+                potter->Load(array[index]);
+                if(index == 0){
 
-        if(index >= 0)
-            k = 0;
+                    for(int i = 0; i < 2; i++)
+                    {
+                        potter->Select(i);
+                        potter->Execute();
+                        potter->Display();
+                    }
 
-
+                }else{
+                    potter->Select(1);
+                    potter->Execute();
+                    potter->Display();
+                }
 
     }
 
-    //return 0;
+
 }

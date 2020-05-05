@@ -31,12 +31,13 @@ private:
     Naive salesMan;
     bool selection[4];
     vector<Town> vec1;
-	double timeSpan;
-    list<int> holder;
+    float holder;
+    float holder1;
     float holder2;
+    list<float> holder4;
     AdjacencyList ajay;
-    pair<string, double> naively;
-    pair<string, double> evolutionary;
+    Tour solution;
+
 
 
 

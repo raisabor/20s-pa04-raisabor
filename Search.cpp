@@ -4,8 +4,6 @@ Search::Search()
 {
 	
 
-    timeSpan = 0.0;
-    holder2 = 0.0;
 	
 	
 	
@@ -95,9 +93,9 @@ void Search::Load(string loade)
              
             }
 
-          for(int f = 0; f < 9; f++)
+          for(int f = 0; f < 7; f++)
           {
-              for(int g = 0; g < 9; g++)
+              for(int g = 0; g < 7; g++)
               {
                   ajay.insertFor(*(new Town(vec1[f])), *(new Town(vec1[g])));
               }
@@ -115,55 +113,47 @@ void Search::Load(string loade)
 void Search::Display()
 {
 
-	if(selection[0])
+    if(selection[0])
     {
-    //cout << "Algorithm name: " << endl;
-    //cout << "Exectuion time(seconds): "<< endl;
-    //cout << "Optimal Path: ";
-    
+
+        cout << "Algorithm name: Naive Search"  << endl;
+        cout << "Optimal Distance: " << holder << endl;
+         cout << endl;
+
+    }
+
+	if(selection[1])
+    {
+	    cout << "Algorithm name: Genetic Search" << endl;
+
+
+    cout << "Initial distance: " << holder1 << endl;
+
+    cout << "Final distance: " << holder2 << endl;
+
+    cout << "Optimal Path: " << endl;
+    solution.print();
+
     cout << endl;
     }
 
-    if(selection[1])
-    {
 
-        cout << "Algorithm name: " << get<0>(naively) << endl;
-        cout << "Exectuion time(seconds): " << get<1>(naively) << endl;
-        cout << "Optimal Path: ";
-        for(const int &i: holder)
-        {
-            cout << i << "-> ";
-        }
-        cout << endl;
-    }
     
 
 }
-    
 
-void Search::Stats()
-{
-
-    if(selection[1])
-    {
-
-        naively = make_pair("Naive Technique",timeSpan);
-
-    }else{
-        evolutionary = make_pair("Genetic Technique", timeSpan);
-    }
-  
-}
 
 void Search::Select(int level)
 {
      switch(level)
      {
-    case Gene:
+    case Brute:
 		 selection[0] = true;
+		 selection[1] = false;
          break;
-     case Brute:
+     case Gene:
 		 selection[1] = true;
+		 selection[0] = false;
          break;
      default:
          cout << "Invalid Selection\n";
@@ -172,78 +162,34 @@ void Search::Select(int level)
 
 }
 
-void Search::Save(string path)
-{
-    ofstream solution;
-
-      solution.open("path");
-
-      if(solution.is_open())
-      {
-      if(selection[0])
-      {
-          solution << "Algorithm name: " << endl;
-          solution << "Exectuion time(microseconds): " << endl;
-          cout << "Optimal Path: ";
-              
-
-          solution << endl;
-
-      }
-    
-    if(selection[1])
-    {
-    
-            cout << "Algorithm name: " << endl;
-            cout << "Exectuion time(microseconds): " << endl;
-            cout << "Optimal Path: ";
-           
-            solution << endl;
-        }
-    }
-}
 
 void Search::Execute()
 {
 
+    if(selection[0])
+        holder = salesMan.shortestCycle(ajay);
 
-	if (selection[0])
+	if (selection[1])
 	{
-		chrono::high_resolution_clock::time_point t1 = chrono::high_resolution_clock::now();
-        
-        cout << "Genetic Search" << endl;
+
         //initialize population
         Population pop(50, true);
         
-        cout << "Initial distance: " << pop.getFittest().getDistance() << endl;
-        
+
+        holder1 = pop.getFittest().getDistance();
         // Evolve population for 100 generations
         
         for (int i = 0; i < 100; i++)
-        {
-        pop = Genetic::run(pop);
-        }
-        
-        // Print final results
-        cout << "Finished" << endl;
-        cout << "Final distance: " << pop.getFittest().getDistance() << endl;
-        cout << "Solution: " << endl;
-        pop.getFittest().print();
+             pop = Genetic::run(pop);
 
-        //pop.tours.clear();
-        //delete pop;
-        
-		chrono::high_resolution_clock::time_point t2 = chrono::high_resolution_clock::now();
-		timeSpan = chrono::duration_cast<chrono::milliseconds>(t2 - t1).count();
+        // contain final results
+
+        holder2 = pop.getFittest().getDistance();
+
+        solution = pop.getFittest();
+
 	}
 
-    if (selection[1])
-    {
-        chrono::high_resolution_clock::time_point t1 = chrono::high_resolution_clock::now();
-        holder = salesMan.shortestCycle(ajay, 0);
-        chrono::high_resolution_clock::time_point t2 = chrono::high_resolution_clock::now();
-        timeSpan = chrono::duration_cast<chrono::microseconds>(t2 - t1).count();
-    }
 
 
 

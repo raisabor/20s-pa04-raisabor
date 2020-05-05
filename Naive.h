@@ -28,16 +28,14 @@ class Naive {
     
 private:
     // store all vertex apart from source vertex
-    vector<int> vertice;
-    list<int> optPath;
+    vector<float> vertice;
+
     
 public:
     Naive();
    ~Naive();
-    list<int> shortestCycle(AdjacencyList graph, int count);
+    float shortestCycle(AdjacencyList graph);
     float min(float, float);
-    void calcPath(vector<int>);
-    list<int> getOptPath();
     
     
 };

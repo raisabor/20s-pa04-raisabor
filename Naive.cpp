@@ -19,13 +19,14 @@ Naive::~Naive()
 }
 
 
-list<int> Naive::shortestCycle(AdjacencyList graph, int count)
+float Naive::shortestCycle(AdjacencyList graph)
 {
 
 
-       for (int i = 0; i < 9; i++)
+
+       for (int i = 0; i < 7; i++)
        {
-           if (i != count)
+           if (i != 0)
            {
                vertice.push_back(i);
            }
@@ -39,67 +40,38 @@ list<int> Naive::shortestCycle(AdjacencyList graph, int count)
            float currentDistance = 0.0;
              
            // compute current distance
-           int k = count;
-           
+           int k = 0;
+
            for (int i = 0; i < vertice.size(); i++) {
                currentDistance += graph.graph1[k].edges[vertice[i]].getWeight();
                k = vertice[i];
            }
-           currentDistance += graph.graph1[k].edges[count].getWeight();
+           currentDistance += graph.graph1[k].edges[0].getWeight();
+
      
            // update minimum
            minPath = Naive::min(minPath, currentDistance);
             
        } while (next_permutation(vertice.begin(), vertice.end()));
      
-    return getOptPath();
+    return minPath;
     
 }
 
 
 float Naive::min(float x ,float y)
 {
-    int z = 0;
-    if(x < y)
+    float z = x;
+
+    if(x > y)
     {
-        z = x;
-        calcPath(vertice);
+        z = y;
         
     }
-    
-    
+
     return z;
     
     
 }
 
-void Naive::calcPath(vector<int> path)
-{
-    
-    
-    for(int u = 0; u < path.size(); u++)
-    {
-        path[u]++;
-    }
-     
-    
-    list<int> dest(path.begin(), path.end());
-    
-    
-    dest.push_front(1);
-    dest.push_back(1);
-    
-    optPath = dest;
-    
-    
-}
-
-list<int> Naive::getOptPath()
-{
-    return optPath;
-}
-
-
-
-//graph.graph1[k].getData().[vertex[i]].getWeight();
            
