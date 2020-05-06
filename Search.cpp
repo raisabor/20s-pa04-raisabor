@@ -5,10 +5,6 @@ Search::Search()
 {
 	
 
-	
-	
-	
-
 }
 
 Search::~Search()
@@ -121,8 +117,8 @@ void Search::Display()
     }else{
 
         cout << "Algorithm name: Genetic Search" << endl;
-        cout << "Initial distance: " << holder1 << endl;
-        cout << "Final distance: " << holder2 << endl;
+        cout << "Initial distance: " << holder1 << endl; //best distance before genetic algorithm
+        cout << "Final distance: " << holder2 << endl; //best distance after genetic algorithm
         cout << "Time: "<< timing << 's' << endl;
         cout << "Optimal Path: " << endl;
 
@@ -156,8 +152,8 @@ void Search::Save(string filename)
         }else {
 
             out << "Algorithm name: Genetic Search" << endl;
-            out << "Initial distance: " << holder1 << endl;
-            out << "Final distance: " << holder2 << endl;
+            out << "Initial distance: " << holder1 << endl; //best distance before genetic algorithm
+            out << "Final distance: " << holder2 << endl; //best distance after genetic algorithm
             out << "Time: "<< timing << 's' << endl;
             out << "Optimal Path: " << endl;
 
