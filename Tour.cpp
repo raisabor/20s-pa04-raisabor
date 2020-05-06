@@ -201,3 +201,12 @@ void Tour:: print()
 
 }
 
+void Tour::printF(ofstream& stream1) {
+
+    for (int i = 0; i < cycle.size(); i++)
+    {
+        stream1 << cycle[i] << endl;
+
+    }
+}
+

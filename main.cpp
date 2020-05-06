@@ -10,16 +10,17 @@
 #include <iostream>
 #include <time.h>
 
+
 int main(int argc, const char * argv[]) {
 
     srand ( time(NULL) );
     Algorithm* potter = new Search();
 
-    string array[] = { "positions7.txt", "positions25.txt", "positions100.txt"};
+    string array[] = { "positions12.txt", "positions25.txt", "positions100.txt"};
     for( int index = 0; index < 3; index++)
     {
-
                 potter->Load(array[index]);
+
                 if(index == 0){
 
                     for(int i = 0; i < 2; i++)
@@ -27,13 +28,17 @@ int main(int argc, const char * argv[]) {
                         potter->Select(i);
                         potter->Execute();
                         potter->Display();
+                        potter->Save("Output.txt");
+
                     }
 
                 }else{
                     potter->Select(1);
                     potter->Execute();
                     potter->Display();
+                    potter->Save("Output.txt");
                 }
+
 
     }
 

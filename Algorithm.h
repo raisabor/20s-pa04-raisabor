@@ -22,7 +22,7 @@ public:
     virtual void Select(int) = 0;
 	virtual void Execute() = 0;
     virtual void Display() = 0;
-
+    virtual void Save(string) = 0;
 
 
 

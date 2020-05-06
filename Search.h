@@ -37,7 +37,9 @@ private:
     list<float> holder4;
     AdjacencyList ajay;
     Tour solution;
+    int timing;
 
+    ofstream out;
 
 
 
@@ -47,9 +49,9 @@ public:
     void Load(string);
     void Execute();
     void Display();
-    void Stats();
     void Select(int);
     void Save(string);
+
     // void Configure(); future expandability
 
 

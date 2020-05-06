@@ -21,7 +21,6 @@ class Genetic
 private:
     static const float mutationRate;
     static const int tournamentSize;
-    static const bool elitism;
     
 public:
     static Population run(Population);

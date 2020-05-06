@@ -28,7 +28,7 @@ class Naive {
     
 private:
     // store all vertex apart from source vertex
-    vector<float> vertice;
+    vector<int> vertice;
 
     
 public:

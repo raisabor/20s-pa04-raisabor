@@ -12,7 +12,7 @@ AdjacencyList::~AdjacencyList()
 }
 
 
-void AdjacencyList::insertFor(Town& src, Town& dest) //associates each vertex in the graph with a collection of its neighboring edges
+void AdjacencyList::insertFor(Town src, Town dest) //associates each vertex in the graph with a collection of its neighboring edges
 {
 
     //calculate weight between cities

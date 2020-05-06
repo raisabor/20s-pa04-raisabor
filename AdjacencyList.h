@@ -77,7 +77,7 @@ public:
     vector<AdjNode<Town>> graph1;
     AdjacencyList();
     ~AdjacencyList();
-    void insertFor(Town&, Town&);
+    void insertFor(Town, Town);
     vector<Town>& find(Town);
     void printList();
     //overloaded brackets operator

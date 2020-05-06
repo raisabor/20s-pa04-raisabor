@@ -7,6 +7,7 @@
 //
 
 #include "Naive.h"
+#define V 12
 
 Naive::Naive()
 {
@@ -24,7 +25,7 @@ float Naive::shortestCycle(AdjacencyList graph)
 
 
 
-       for (int i = 0; i < 7; i++)
+       for (int i = 0; i < V; i++)
        {
            if (i != 0)
            {

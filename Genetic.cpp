@@ -8,9 +8,8 @@
 
 #include "Genetic.h"
 
-const float Genetic:: mutationRate = 0.015;
+const float Genetic:: mutationRate = 10; //treated as a percentage
 const int Genetic:: tournamentSize = 5;
-const bool Genetic:: elitism = true;
 
 
 Population Genetic:: run(Population poppy)
@@ -54,8 +53,7 @@ Tour Genetic:: crossover(Tour parent1, Tour parent2)
 
     //create the new child
            Tour* child = new Tour();
-           //Town* dummyTown = new Town(0, 0, 0, 0);
-             Town dummyTown;
+           Town dummyTown;
 
            //get start and end sub tour positions for parents1's tour
            int startPos = rand() % parent1.sizeOfTour();
@@ -114,7 +112,9 @@ void Genetic:: mutate(Tour torey)
     for(int tourPos1=0; tourPos1 < torey.sizeOfTour(); tourPos1++)
     {
         // Apply mutation rate
-        if((rand() % 100 + 1) <= Genetic::mutationRate)
+        int mutation = rand() % 100 + 1; // random number in [1,100]
+
+        if(mutation <= Genetic::mutationRate) // checks if the random number <= mutation rate
         {
             // Get a second random position in the tour
             int tourPos2 =  rand() % torey.sizeOfTour() ;

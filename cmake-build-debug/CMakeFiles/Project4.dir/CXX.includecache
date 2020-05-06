@@ -137,6 +137,8 @@ iterator
 -
 string
 -
+fstream
+-
 
 /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/TourManager.cpp
 TourManager.h
@@ -163,6 +165,8 @@ math.h
 -
 string
 -
+fstream
+-
 
 /mnt/c/Users/raisabor/Desktop/Repo/20s-pa04-raisabor/main.cpp
 vector
@@ -172,5 +176,7 @@ Search.h
 iostream
 -
 time.h
+-
+chrono
 -
 

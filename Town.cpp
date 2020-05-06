@@ -133,3 +133,10 @@ string Town::print()
     return actual;
    
 }
+
+ofstream& operator<<(ofstream& fs, const Town& c3) {
+
+    fs << '(' << c3.ident << ',' << c3.x << ',' << c3.y << ',' << c3.z << ')';
+
+    return fs;
+}

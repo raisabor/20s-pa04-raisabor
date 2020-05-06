@@ -5,6 +5,7 @@
 #include <vector>
 #include <math.h>
 #include <string>
+#include <fstream>
 
 
 using namespace std;
@@ -28,6 +29,8 @@ class Town {
 
     bool operator== (const Town&);
     friend ostream& operator<<(ostream&, const Town&);
+
+    friend ofstream& operator<<(ofstream&, const Town&);
     
     float distanceTo(Town);
     static float distance(Town, Town);

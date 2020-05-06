@@ -16,6 +16,7 @@
 #include <algorithm>
 #include<iterator>
 #include <string>
+#include <fstream>
 
 
 class Tour{
@@ -41,8 +42,7 @@ public:
     bool containsTown(Town);
     void random_shuffle(vector<Town>&);
     void print();
-    
-    
+    void printF(ofstream&);
 };
 
 #endif /* Tour_h */
